@@ -1,6 +1,6 @@
 #Schramm Farms & Orchards
 
-** A website I made for a local farm. **
+A website I made for a local farm.
 
 [View Schramm Farms](http://www.schrammfarms.com/)
 
@@ -29,4 +29,4 @@
 - [Google Sitemap] (http://wordpress.org/plugins/google-sitemap-plugin/)
 
 ### Mention
-- Store Hours script by [Cory Etzkorn] (coryetzkorn.com)
+- Store Hours script by [Cory Etzkorn] (http://www.coryetzkorn.com)
