@@ -1,0 +1,47 @@
+/******************************************************************
+Site Name: Schramm Farms
+Author: Greg DiPietro
+
+Stylesheet: All Banners
+
+These are the styles that go into defining the page banners at the top of each page.
+******************************************************************/
+
+
+.module_pageBanner {
+	position: relative;
+	border-bottom: $unit*3 solid $black;
+	margin:0 0 $unit*2 0;
+	margin:0 0 $unit*5 0;
+	.cover {
+		min-width:100%;
+		background-position:center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		display: block;
+		background-position: center;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		height:425px;
+		background-repeat:no-repeat;
+	}
+	.title {
+		position: absolute;
+		left: 0;
+		margin:0 auto;
+		bottom: $unit*-8;
+		padding:0 $unit*2;
+		text-align: center;
+		width: 100%;
+		h1 {
+			margin: 0;
+			@include font-size($base-font-size*2);
+			line-height:1.5;
+		}
+	}
+	
+}

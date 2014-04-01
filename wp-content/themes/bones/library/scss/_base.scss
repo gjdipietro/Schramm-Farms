@@ -1,0 +1,436 @@
+/******************************************************************
+Site Name:
+Author:
+
+Stylesheet: Base Mobile Stylesheet
+
+Be light and don't over style since everything here will be
+loaded by mobile devices. You want to keep it as minimal as
+possible. This is called at the top of the main stylsheet
+and will be used across all viewports.
+
+******************************************************************/
+
+html {
+  font-size: 62.5%; /* Sets up the Base 10 stuff */
+}
+
+
+/********************
+WORDPRESS BODY CLASSES
+style a page via class
+********************/
+.rtl {}                           /* for sites that are read right to left (i.e. hebrew) */
+.home {}                          /* home page */
+.blog {}                          /* blog template page */
+.archive {}                       /* archive page */
+.date {}                          /* date archive page */
+	.date-paged-1 {}                /* replace the number to the corresponding page number */
+.search {}                        /* search page */
+	.search-results {}              /* search result page */
+	.search-no-results {}           /* no results search page */
+	.search-paged-1 {}              /* individual paged search (i.e. body.search-paged-3) */
+.error404 {}                      /* 404 page */
+.single {}                        /* single post page */
+	.postid-1 {}                    /* individual post page by id (i.e. body.postid-73) */
+	.single-paged-1 {}              /* individual paged single (i.e. body.single-paged-3) */
+.attachment {}                    /* attatchment page */
+	.attachmentid-1 {}              /* individual attatchment page (i.e. body.attachmentid-763) */
+	.attachment-mime-type {}        /* style mime type pages */
+.author {}                        /* author page */
+	.author-nicename {}             /* user nicename (i.e. body.author-samueladams) */
+	.author-paged-1 {}              /* paged author archives (i.e. body.author-paged-4) for page 4 */
+.category {}                      /* category page */
+	.category-1 {}                  /* individual category page (i.e. body.category-6) */
+	.category-paged-1 {}            /* replace the number to the corresponding page number */
+.tag {}                           /* tag page */
+	.tag-slug {}                    /* individual tag page (i.e. body.tag-news) */
+	.tag-paged-1 {}                 /* replace the number to the corresponding page number */
+.page-template {}                 /* custom page template page */
+	.page-template-page-php {}      /* individual page template (i.e. body.page-template-contact-php */
+	.page-paged-1 {}                /* replace the number to the corresponding page number */
+	.page-parent {}                 /* parent page template */
+	.page-child {}                  /* child page template */
+	.parent-pageid-1 {}             /* replace the number to the corresponding page number */
+.logged-in {}                     /* if user is logged in */
+.paged {}                         /* paged items like search results or archives */
+	.paged-1 {}                     /* individual paged (i.e. body.paged-3) */
+
+
+
+.s2_message, .s2_error {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	width: 100%;
+	text-align: center;
+	background: #333;
+	color: #fff;
+}
+.s2_error {background:$accent-colorRed;}
+.s2_dumbMessage {display:none !important}
+
+/******************************************************************
+H1, H2, H3, H4, H5 STYLES
+******************************************************************/
+h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5 {
+	font-family: $sans-serif-heading;
+	text-rendering: optimizelegibility;
+	font-weight: 700;
+	/*
+	if you're going to use webfonts, be sure to check your weights
+	http://css-tricks.com/watch-your-font-weight/
+	*/
+
+	/* removing text decoration from all headline links */
+	a {
+		text-decoration: none;
+	}
+}
+
+h1, .h1 {
+	font-size: 2.5em;
+	line-height: 1.333em;
+	font-weight: 700;
+}
+
+h2, .h2 {
+	font-size: 1.75em;
+	line-height: 1.4em;
+	margin-bottom: 0.375em;
+	font-weight: 700;
+}
+
+h3, .h3 {
+	font-size: 1.125em;
+	font-weight: 400;
+}
+
+h4, .h4 {
+	font-size: 1.1em;
+	font-weight: 400;
+}
+
+h5, .h5 {
+	font-size: 0.846em;
+	line-height: 2.09em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+/*********************
+ABOUT AND MAP
+*********************/
+iframe {
+   max-width: 100%; 
+}
+/* From http://codepen.io/chriscoyier/full/kycDp */
+.map-container {
+  width: 100%;
+  margin: 0 auto;
+  height: 0;
+  padding-top: 50%;
+  position: relative;
+  display: none; /* Hide for small screens */
+  iframe {
+    width: 100%;
+    height: 100%; /* had to specify height/width */
+    position: absolute;
+    top: 0; 
+    right: 0;
+    left: 0; 
+    bottom: 0;   
+  }
+}
+
+/* Medium Screens */
+@media all and (min-width: $break-layout-show-menu) {
+  .map-container {
+    display: block;
+  } 
+  .static-img, .map-link {
+    display: none; 
+  }
+}
+
+
+
+/*********************
+POSTS & CONTENT STYLES
+*********************/
+		.hentry {
+			header {}
+			footer {}
+
+		} /* end .hentry */
+
+		.single-title,
+		.page-title {}
+
+
+		.article-header {
+			text-align: center;
+			border-bottom: 1px solid $grey;
+			padding:0 0 2em 0;
+			margin: 0 0 2em 0;
+		}
+		.single-title {
+			margin: 0;
+		}
+
+		.page-title {}
+
+		.archive-title { }
+
+		/* want to style individual post classes? Booya! */
+		.post-id {}         /* post by id (i.e. post-3) */
+		.post {}            /* general post style */
+		.page {}            /* general article on a page style */
+		.attachment {}      /* general style on an attatchment */
+		.sticky {}          /* sticky post style */
+		.hentry {}          /* hentry class */
+		.category-slug {}   /* style by category (i.e. category-videos) */
+		.tag-slug {}        /* style by tag (i.e. tag-news) */
+
+		/* post meta */
+		.byline {
+			color: $sub-text;
+			margin:0;
+			time {}
+		}
+
+		/* entry content */
+		.entry-content {
+			p {
+				
+			}
+
+
+			ul, ol, table, dl {}
+
+			ul, ol {
+
+				li {}
+
+			}
+
+			ul {
+
+				li {}
+
+			}
+
+			ol {
+
+				li {}
+
+			}
+
+			blockquote {
+
+				&:before {}
+
+			}
+
+			dl {}
+
+			dt {}
+
+			dd {
+				margin-left: 0;
+				font-size: 0.9em;
+				color: #787878;
+				margin-bottom: 1.5em;
+			}
+
+			img {
+				
+			}
+
+			/*
+			image alignment on a screen this size may be
+			a bit difficult. It's set to start aligning
+			and floating images at the next breakpoint,
+			but it's up to you. Feel free to change it up.
+			*/
+			.alignleft, img.alignleft {}
+			.alignright, img.alignright {}
+			.aligncenter, img.aligncenter {}
+
+			video, object {
+				max-width: 100%;
+				height: auto;
+			}
+
+			pre {
+				background: #eee;
+				border: 1px solid #cecece;
+				padding: 10px;
+			}
+
+			.recipe {
+				@extend .module_styledBG;
+				position: relative;
+				.printButton {
+					@extend .printButton;
+					
+				}
+					h2 {
+					margin:0;
+				}
+				.cookTime {
+					margin:0 0 $unit 0;
+					padding: 0 0 $unit 0;
+					border-bottom: 1px solid #EEE;
+					color: $sub-text;
+					li {
+						display: inline;
+						padding-right: $unit;
+						strong {
+
+							font-weight: 400;
+						}
+					}
+				}
+				
+				h3 {
+					color: $accent-colorRed;
+					margin: 0 0 1em 0;	
+				}
+
+				h4.comp-name {
+					font-weight: 600;
+					margin:0;
+					font-size: 1.1em;
+				}
+				.comp-ing {
+					margin: 0 0 1em 0;
+					font-size: 1em;
+				}
+			}
+
+			
+
+		} /* end .entry-content */
+
+
+		.wp-caption {
+			max-width: 100%;
+			background: #eee;
+			padding: 5px;
+			margin: 0 0 24px 0;
+			margin: 0 0 2.4rem 0;
+
+			/* images inside wp-caption */
+			img {
+				max-width: 100%;
+				margin: 0 !important;
+				width: 100%;
+			}
+
+			p.wp-caption-text {
+				font-size: 0.85em;
+				margin: 5px 0 0 0;
+				color: $sub-text;
+				text-align: center;
+			}
+
+		} /* end .wp-caption */
+
+		/* image gallery styles */
+		.gallery {
+
+			dl {
+
+				a {}
+
+				img {}
+
+			}
+
+			dt {}
+
+			dd {}
+
+		} /* end .gallery */
+
+		/* gallery caption styles */
+		.gallery-caption {}
+
+		.size-full {}
+		.size-large {}
+		.size-medium {}
+		.size-thumbnail {}
+
+
+
+/******************************************************************
+PAGE NAVI STYLES
+******************************************************************/
+.pagination,
+.wp-prev-next {
+	margin: 1.1em 0 2.2em;
+}
+	.pagination{
+        text-align: center;
+        ul {
+            display: inline-block;
+            white-space: nowrap;
+            padding:0;
+            clear: both;
+            margin: 1px;
+            li {
+                padding: 0;
+                margin: 0;
+                float: left;
+                display: inline;
+                overflow: hidden;
+                a, span {
+                    margin: 0;
+                    text-decoration: none;
+                    padding: 0;
+                    line-height: 1em;
+                    font-size: 1em;
+                    font-weight: normal;
+                    padding: .5em;
+                    min-width: 1em;
+                    display: block;
+                }
+                span.current{
+                	font-weight: bold;
+                }
+                a:hover, a:focus {
+                    
+                }
+            }
+        }
+    } /* end .bones_page_navi */
+
+	/* fallback previous & next links */
+	.wp-prev-next {
+
+		ul {}
+
+		.prev-link {
+			float: left;
+		}
+
+		.next-link {
+			float: right;
+		}
+
+	} /* end .wp-prev-next */
+
+
+
+

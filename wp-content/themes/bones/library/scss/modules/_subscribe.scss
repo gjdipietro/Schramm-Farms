@@ -1,0 +1,19 @@
+/******************************************************************
+Site Name: Schramm Farms
+Author: Greg DiPietro
+
+Stylesheet: Charts for produce
+
+******************************************************************/
+.subscribe {
+    text-align: center;
+    label {display: block; font-size:16px; }
+    input[type="email"] {
+      padding: 3px 6px;
+      border: 2px solid #ddd;
+    }
+    input[type="submit"] {
+      vertical-align:middle;
+      margin:-3px 0 0 0;
+    }
+}

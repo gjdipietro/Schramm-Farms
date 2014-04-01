@@ -1,0 +1,146 @@
+/******************************************************************
+Site Name: Schramm Farms
+Author: Greg DiPietro
+
+Stylesheet: HEADER AND FOOTER MODULE
+
+The style and presentation of the header and footer.
+Has nothing to do with their positioning and layout.
+
+******************************************************************/
+
+
+
+.module_navigation {
+	.nav {
+		ul {
+			margin: $unit 0 0 0;
+			li {
+				a {
+					display: block;
+					text-decoration: none;
+					text-align: center;
+					padding: $unit/4 0;
+					font-family: $serif;
+					text-transform: uppercase;
+					color: $body-color;
+					@include font-size($base-font-size);
+					&:hover, &:focus {
+						color: $yellow;
+					}
+				}
+				&:last-child {}
+				
+				/* highlight current page */
+				&.current-menu-item,
+				&.current_page_item,
+				&.current-page-ancestor {
+					a {
+						color: $yellow;
+					}
+				} 
+			}
+		}
+	}
+
+	@media screen and (min-height: 600px) and (min-width: 525px) {
+		.nav ul li a {
+			@include font-size($base-font-size*1.5);
+			padding: $unit/2 0;
+		}
+	}
+
+	@media screen and (min-width: $break-layout-show-menu) {
+		.nav ul {
+			margin: $unit 0 0 0;
+			li {
+				padding-bottom:$unit/8;
+				a {
+					@include font-size($base-font-size);
+					padding: 0;
+					color: #FFF;
+					text-align: left;
+					text-shadow: 1px 1px 2px #333, 0px 0px 24px #333;
+					&:hover, &:focus {
+						color: $yellow;	
+					}
+				}
+			}
+		}
+	}
+
+}
+
+
+
+
+
+
+
+.nav-toggle {
+	position: absolute;
+	top:0; 
+	left:0;
+	padding: $unit;
+	margin: $unit/2;
+	border:1px solid darken($black, 20%);
+	cursor: pointer;
+	@include transition(all 0.3s $transition-timing );
+	opacity:.9s;
+	z-index:100;
+	background:lighten($black, 12%);
+	background:rgba(0,0,0,.7);
+	color:$white;
+
+	.nav-toggle-icon {
+		position: relative;
+		width: 2.5em;
+		height: .25em;
+		background: $white;
+		font-size: .75em;
+		@include transition(all 0.3s $transition-timing );
+		@include border-radius(2.5em);
+		
+		&:after, &:before {
+			display: block;
+			content: "";
+			height: .25em;
+			width: 2.5em;
+			bottom: .825em;
+			background: $white;
+			position: absolute;
+			z-index: -1;
+			@include transition(all 0.3s $transition-timing );
+			border-radius: 1em;			
+		}
+		&:before {
+			top: .825em;
+		}
+	}
+
+	@media screen and (min-width: $break-layout-show-menu) {
+		display: none;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,20 @@
+.coolBox {
+	@include border-radius(2px);
+	background:#FFF;
+	&:after {
+		display: block;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		content: '';
+		margin: 0px;
+		box-shadow: rgba(0, 0, 0, 0.2) 0 0 0 1px inset;
+	}
+	&:hover {
+		-webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.55);
+		-moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.55);
+		box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.55);
+	}
+}

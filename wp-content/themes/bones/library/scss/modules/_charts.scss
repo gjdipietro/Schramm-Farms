@@ -1,0 +1,59 @@
+/******************************************************************
+Site Name: Schramm Farms
+Author: Greg DiPietro
+
+Stylesheet: Charts for produce
+
+******************************************************************/
+
+.season {
+  border: 1px solid $ltgrey;
+  margin-top:-25px;
+
+  tr {
+    td {
+      border: 1px solid $ltgrey;
+      &:first-child {
+        padding: $unit/8 $unit;
+        width: 30%;
+      }
+      &.divider {
+        background:$ltgrey;
+      }
+
+      &.season {background: lighten($green, 18%); }
+      &.peak {background: $green;}
+      
+    }
+  }
+}
+
+.apple {
+  border: 1px solid $ltgrey;
+  margin-top:-25px;
+  tr {
+    td {
+      padding: $unit;
+      border: 1px solid $ltgrey;
+      text-align:center;
+
+      strong {
+        font-weight:400;
+        color: $heading-color;
+        font-size: 18px;
+      }
+      span {font-size: 14px; color: $sub-text; font-family: $sans-serif;}
+      p {
+        color: $body-color; 
+        margin: 0; 
+        font-family: $sans-serif;
+      }
+
+      &:first-child {
+        text-align: left;
+        width: 60%;
+      }
+      
+    }
+  }
+}

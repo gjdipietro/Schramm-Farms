@@ -1,0 +1,41 @@
+/******************************************************************
+Site Name: Schramm Farms
+Author: Greg DiPietro
+
+Stylesheet: Link Module
+
+If it has to do with the way LINKS work it'll be in here.
+
+******************************************************************/
+
+.couponImg {
+  background-image: url("../../library/images/ribbon.gif");
+  background-repeat: no-repeat;
+  width: 41px;
+  height: 100px;
+  position: absolute;
+  top: -5px;
+  left: $unit/2;
+  z-index: 10;
+}
+
+.actualCoupon {
+  @extend .module_styledBG;
+  position: relative;
+  border: 5px dashed #CCC;
+
+  .printButton {
+    @extend .printButton;
+  }
+  .title {
+    text-align: center;
+    img {
+      width: 118px;
+      height: 103px;
+      max-width:  118px;
+      min-width: 118px;
+    }
+    padding-bottom: $unit;
+  }
+}
+

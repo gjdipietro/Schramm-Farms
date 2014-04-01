@@ -1,0 +1,73 @@
+/******************************************************************
+Site Name: Schramm Farms
+Author: Greg DiPietro
+
+Stylesheet: Main Content
+
+The style and presentation of the header and footer.
+Has nothing to do with their positioning and layout.
+
+******************************************************************/
+
+
+
+.module_content {	
+	padding: 0 $unit;
+	max-width: 680px;
+	margin: 0 auto;
+	h1 {
+		@include font-size($base-font-size*1.5);
+		line-height: 1.3;
+		font-family: $sans-serif-heading;
+
+	}
+	h3.tagline {
+		@include font-size($base-font-size*.9);
+		padding-top: $unit/2;
+	}
+	p {
+		@include font-size($base-font-size);
+		margin: 0 0 27px 0;
+		margin: 0 0 2.7rem 0;
+		-webkit-hyphens: none;
+		-moz-hyphens: none;
+		hyphens: none;
+	}
+
+	img {
+		margin: 0 auto 27px auto;
+		margin: 0 auto 2.7rem auto;
+		display: block;
+		max-width: 100%;
+		min-width: 100%;
+		height: auto;
+	}
+
+	figure {
+		img {
+			margin: 0 0 0 0;
+			margin: 0 0 0 0;
+		}
+		figcaption { 
+			margin: 14px 0 28.8px 0;
+			margin: 1.4rem 0 2.88rem 0;
+			font-family: $sans-serif;
+			text-align: center; 
+			color: $textgrey;
+		}
+	}
+
+	@media screen and (min-width: $break-layout-full) {
+		width: 680px;
+		padding: 0;
+		h1 {
+			@include font-size($base-font-size*2.3);
+			line-height: 1.3;
+		}
+		h3.tagline {
+			@include font-size($base-font-size*1.3);
+		}
+	}
+	
+}
+
