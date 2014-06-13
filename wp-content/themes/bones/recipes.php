@@ -31,7 +31,7 @@
 					$temp = $wp_query; 
 					$wp_query = null; 
 					$wp_query = new WP_Query(); 
-					$wp_query->query('showposts=22&post_type=blog'.'&paged='.$paged); 
+					$wp_query->query('showposts=15&post_type=blog'.'&paged='.$paged); 
 			  		while ($wp_query->have_posts()) : $wp_query->the_post(); 
 					?>
 					<li role="article" id="post-<?php the_ID(); ?>" class="clearfix">
