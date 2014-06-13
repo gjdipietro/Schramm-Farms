@@ -9,4 +9,7 @@ RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule . /SchrammsFarms/index.php [L]
 </IfModule>
 
+
+Redirect /home.php http://www.schrammfarms.com
+
 # END WordPress

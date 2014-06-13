@@ -70,6 +70,8 @@ Stylesheet: Basic Look and feel for any of the post lists.
 	}
 
 	@media screen and (min-width: $break-layout-post-grid-3x) {
+		margin-left: -50px;
+		margin-right: -50px;
 		li {
 			width:32%;
 			margin-right:2%;
@@ -80,7 +82,17 @@ Stylesheet: Basic Look and feel for any of the post lists.
 			&:nth-child(3n) {
 				margin-right:0;
 			}
+			h2 {
+				overflow-y: hidden;
+				height: 48px;
+				padding:$unit/2 0;
+			}
 		}
+		
+	}
+	@media screen and (min-width: 1000px) {
+		margin-left: -150px;
+		margin-right: -150px;
 	}
 	
 }

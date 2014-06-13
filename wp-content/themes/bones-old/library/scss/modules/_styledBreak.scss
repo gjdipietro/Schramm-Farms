@@ -1,0 +1,52 @@
+.module_styledBreak {
+	padding:$unit*1.5 0;
+	margin: $unit*1.5 0 $unit*1.5 0;
+	margin: 2.4rem 0 2.4rem 0;
+	border-bottom: 1px solid $ltgrey;
+	border-top: 1px solid $ltgrey;
+	text-align: center;
+	font-family: $sans-serif;
+	h1, h2, h3, h4, h5 {
+		margin: 0;
+	}
+	h1 {
+		a {color: $body-color;}
+	}
+	.tagline {
+		color: lighten($body-color, 10%);
+		font-family: $sans-serif;
+		a {}
+	}
+	.fa-circle {
+		font-size: 5px;
+		vertical-align: middle;
+		display: inline;
+		padding: 0 $unit/2;
+	}
+	&.noTopBorder {
+		border-top:none;
+		padding-top: 0;
+	}
+	&.thin {
+		padding:$unit 0;
+	}
+}
+
+
+.module_styledBG{
+	background: $accent-colorBlueLt;
+  	padding: $unit*2;
+  	margin-top: $unit*3;
+}
+
+.module_annoucement {
+	margin: $unit*2 0;
+	.title {
+  		font-family: $sans-serif;
+  		color: $heading-color;
+  		display: block;
+  		font-weight: 600;
+  	}
+  	p {margin:0;}
+
+}

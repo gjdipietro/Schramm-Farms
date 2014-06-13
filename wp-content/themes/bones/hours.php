@@ -18,13 +18,13 @@ date_default_timezone_set('America/New_York');
 // If open multiple times in one day, enter time ranges separated by a comma
 // If open late (ie. 6pm - 1am), add hours after midnight to the next day (ie. 00:00-1:00)
 $hours = array(
-    'mon' => array('9:00-19:00'),
-    'tue' => array('9:00-19:00'),
-    'wed' => array('9:00-19:00'),
-    'thu' => array('9:00-19:00'),
-    'fri' => array('9:00-19:00'),
-    'sat' => array('9:00-18:00'),
-    'sun' => array('10:00-17:00'),
+    'mon' => array('9:00-20:00'),
+    'tue' => array('9:00-20:00'),
+    'wed' => array('9:00-20:00'),
+    'thu' => array('9:00-20:00'),
+    'fri' => array('9:00-20:00'),
+    'sat' => array('9:00-19:00'),
+    'sun' => array('10:00-18:00'),
 );
 
 // Optional: add exceptions (great for holidays etc.)

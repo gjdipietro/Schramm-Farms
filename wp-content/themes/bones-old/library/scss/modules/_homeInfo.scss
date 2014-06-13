@@ -1,0 +1,53 @@
+
+
+.module_homeInfo {
+	text-align: center;
+	margin: $unit*1.5 0 $unit*1.5 0;
+	margin: 2.4rem 0 2.4rem 0;
+	
+	p {
+		margin:0;
+	}
+	
+	.sTagline {
+		font-family:$sans-serif-heading;
+		@include font-size($base-font-size*1.6);
+		line-height: 1.3;
+		margin-bottom: $unit/2;
+	}
+
+	.sTaglineSub {
+		color: $textgrey;
+		font-family:$serif;
+		@include font-size($base-font-size*.95);
+		i {
+			display: none;	
+		}
+		span {display: block;}
+		a {
+			color: $textgrey;
+		}
+	}
+	
+
+	@media screen and (min-width: $break-layout-show-menu) {
+		margin-left: auto;
+		margin-right: auto;
+		.sTagline {
+			@include font-size($base-font-size*1.6);
+			line-height: 1.4;
+		}
+		.sTaglineSub {
+			@include font-size($base-font-size);
+			.fa-circle {
+				font-size: 5px;
+				vertical-align: middle;
+				display: inline;
+				padding: 0 $unit/2;
+			}
+			span {
+				display: inline;
+			}
+		}
+	}
+}

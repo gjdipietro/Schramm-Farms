@@ -30,3 +30,20 @@ a {
   }
 }
 
+
+.blog-nav {
+  margin-bottom: $unit*4;
+  text-align: center;
+  a {
+    margin-right: $unit*2;
+    border: 1px solid $body-color;
+    border-radius: $unit;
+    padding: $unit/2 $unit;
+    &:hover {
+      background: $body-color;
+      color: $offWhite;
+      text-decoration: none;
+      transition:none;
+    }
+  }
+}

@@ -25,12 +25,15 @@
 			<section class="module_thecontent clearfix" itemprop="articleBody">
 				<?php the_content(); ?>
 
+
 				<ul class="module_stacked_postList clearfix">
-					<?php
-					//WordPress loop for custom post type
-			 		$query = 'post_type=blog&posts_per_page=-1&posts&showposts=15';
-					$my_query = new WP_Query($query);
-					while ($my_query->have_posts()) : $my_query->the_post(); ?>
+					<?php 
+					$temp = $wp_query; 
+					$wp_query = null; 
+					$wp_query = new WP_Query(); 
+					$wp_query->query('showposts=22&post_type=blog'.'&paged='.$paged); 
+			  		while ($wp_query->have_posts()) : $wp_query->the_post(); 
+					?>
 					<li role="article" id="post-<?php the_ID(); ?>" class="clearfix">
 						<a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>">
 							<?php 
@@ -45,7 +48,17 @@
 							</div>
 						</a>
 					</li>
-					<?php endwhile;  wp_reset_query(); ?>
+					<?php endwhile; ?>
+
+					<nav class="blog-nav">
+					    <?php previous_posts_link('&laquo; Previous') ?>
+					    <?php next_posts_link('Next &raquo;') ?>
+					</nav>
+
+					<?php 
+					  $wp_query = null; 
+					  $wp_query = $temp;  // Reset
+					?>
 				</ul>
 			</section>
 		</article>

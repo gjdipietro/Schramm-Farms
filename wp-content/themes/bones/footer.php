@@ -36,9 +36,9 @@
 								</div>
 
 								<div class="hours">
-									Mon to Fri: 9 - 7pm<br>
-									Saturday: 9 - 6pm<br>
-									Sunday: 10 - 5pm
+									Mon to Fri: 9 - 8pm<br>
+									Saturday: 9 - 7pm<br>
+									Sunday: 10 - 6pm
 								</div>
 							
 
